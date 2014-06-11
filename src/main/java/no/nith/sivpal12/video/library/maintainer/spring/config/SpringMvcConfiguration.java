@@ -12,7 +12,10 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages={"no.nith.sivpal12.video.library.maintainer.controller", "no.nith.sivpal12.video.library.maintainer.services"})
+@ComponentScan(basePackages = {
+        "no.nith.sivpal12.video.library.maintainer.controllers",
+        "no.nith.sivpal12.video.library.maintainer.services"
+})
 public class SpringMvcConfiguration extends WebMvcConfigurerAdapter {
 
     @Override

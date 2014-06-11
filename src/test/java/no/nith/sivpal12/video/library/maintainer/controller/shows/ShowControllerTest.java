@@ -3,7 +3,7 @@ package no.nith.sivpal12.video.library.maintainer.controller.shows;
 import no.nith.sivpal12.video.library.maintainer.constants.ControllerModel;
 import no.nith.sivpal12.video.library.maintainer.constants.UriContext;
 import no.nith.sivpal12.video.library.maintainer.constants.ViewName;
-import no.nith.sivpal12.video.library.maintainer.controller.ShowController;
+import no.nith.sivpal12.video.library.maintainer.controllers.ShowController;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package no.nith.sivpal12.video.library.maintainer.controller;
+package no.nith.sivpal12.video.library.maintainer.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
