@@ -14,6 +14,10 @@ public class HomeModel extends BaseModel {
         mediaItems.add(mediaItem);
     }
 
+    public void addMediaItems(List<MediaItem> mediaItems) {
+        this.mediaItems.addAll(mediaItems);
+    }
+
     public List<MediaItem> getMediaItems() {
         return mediaItems;
     }

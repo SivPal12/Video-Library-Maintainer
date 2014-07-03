@@ -1,21 +1,10 @@
 package no.nith.sivpal12.video.library.maintainer.domain;
 
 
-public class Show {
+public class Show extends MediaItem {
 
-    private final String name;
-    private final int numberOfSeasons;
-
-    public Show(String name, int numberOfSeasons) {
-        this.name = name;
-        this.numberOfSeasons = numberOfSeasons;
+    public Show(String link, String image, String title, String description) {
+        super(link, image, title, description);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getNumberOfSeasons() {
-        return numberOfSeasons;
-    }
 }

@@ -1,6 +1,6 @@
 package no.nith.sivpal12.video.library.maintainer.model.abs;
 
-import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import no.nith.sivpal12.video.library.maintainer.constants.ViewMessages;
@@ -10,11 +10,23 @@ public abstract class BaseModel {
 
     private String title = ViewMessages.WINDOW_TITLE;
     private String brand = ViewMessages.BRAND;
-    private List<MenuItem> menuItems = Arrays.asList(new MenuItem[] {
-            new MenuItem("Movies", "#", true), new MenuItem("TV Shows", "#") });
+    private List<MenuItem> menuItems = new LinkedList<>();
+
+    public BaseModel() {
+            menuItems.add(new MenuItem("Movies", "#", true));
+            menuItems.add(new MenuItem("TV Shows", "#"));
+    }
+
+    public void addMenuItem(MenuItem menuItem) {
+        menuItems.add(menuItem);
+    }
 
     public String getBrand() {
         return brand;
+    }
+
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
     }
 
     public String getTitle() {
@@ -27,14 +39,6 @@ public abstract class BaseModel {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public List<MenuItem> getMenuItems() {
-        return menuItems;
-    }
-
-    public void setMenuItems(List<MenuItem> menuItems) {
-        this.menuItems = menuItems;
     }
 
 }

@@ -47,7 +47,7 @@ public class MediaItem {
 
     private String description;
 
-    private MediaItem(String link, String image, String title,
+    protected MediaItem(String link, String image, String title,
             String description) {
         this.link = link;
         this.image = image;
