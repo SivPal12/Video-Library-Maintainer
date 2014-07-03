@@ -1,7 +1,7 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <head>
-<title>VLM</title>
+<title>${model.title}</title>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <script src="./js/bootstrap.min.js"></script>
 </head>
@@ -10,12 +10,13 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Home</a>
+				<a class="navbar-brand" href="#">${model.brand}</a>
 			</div>
 
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Movies</a></li>
-				<li><a href="#">TV Shows</a></li>
+				<c:forEach items="${model.menuItems}" var="item">
+					<li ${item.active}><a href="${item.link}">${item.name}</a></li>
+				</c:forEach>
 			</ul>
 		</div>
 		<!-- /.container-fluid -->
