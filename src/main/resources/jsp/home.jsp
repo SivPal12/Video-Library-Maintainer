@@ -6,43 +6,39 @@
 <script src="./js/bootstrap.min.js"></script>
 </head>
 <body>
-	<!--Navbar start-->
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">${model.brand}</a>
-			</div>
+    <!--Navbar start-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">${model.brand}</a>
+            </div>
 
-			<ul class="nav navbar-nav">
-				<c:forEach items="${model.menuItems}" var="item">
-					<li ${item.active}><a href="${item.link}">${item.name}</a></li>
-				</c:forEach>
-			</ul>
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-	<!--Navbar end-->
+            <ul class="nav navbar-nav">
+                <c:forEach items="${model.menuItems}" var="item">
+                    <li ${item.active}><a href="${item.link}">${item.name}</a></li>
+                </c:forEach>
+            </ul>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--Navbar end-->
 
-	<!--Tumbnails start-->
-	<div class="container-fluid">
-		<div class="row">
-		<c:forEach var="i" begin="1" end="50">
-			<div class="col-xs-6 col-sm-4 col-md-2">
-				<a href="#4" class="thumbnail"> <img
-					src="http://static.rogerebert.com/uploads/movie/movie_poster/kill-bill-volume-1-2003/large_9O50TVszkz0dcP5g6Ej33UhR7vw.jpg">
-					<div class="caption">
-						<h3>Kill Bill</h3>
-						<p>The Bride wakens from a four-year coma. The child she
-							carried in her womb is gone. Now she must wreak vengeance on the
-							team of assassins who betrayed her - a team she was once part of.
-						</p>
-					</div>
-				</a>
-			</div>
-		</c:forEach>
-		</div>
-	</div>
-	<!--Tumbnails end-->
+    <!--Tumbnails start-->
+    <div class="container-fluid">
+        <div class="row">
+            <c:forEach items="${model.mediaItems}" var="item">
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="${item.link}" class="thumbnail"> <img src="${item.image}">
+                        <div class="caption">
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    </a>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+    <!--Tumbnails end-->
 
 
 </body>
